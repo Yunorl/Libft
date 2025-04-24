@@ -1,0 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/06 21:37:33 by dnahon            #+#    #+#             */
+/*   Updated: 2025/03/07 14:20:35 by dnahon           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../../../libft.h"
+#include <stddef.h>
+
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
+{
+	size_t	dest_len;
+	size_t	src_len;
+	size_t	i;
+
+	dest_len = (size_t)ft_strlen(dest);
+	src_len = (size_t)ft_strlen(src);
+	if (size <= dest_len)
+		return (size + src_len);
+	i = 0;
+	while (src[i] != '\0' && dest_len + i < size - 1)
+	{
+		dest[dest_len + i] = src[i];
+		i++;
+	}
+	dest[dest_len + i] = '\0';
+	return (dest_len + src_len);
+}
