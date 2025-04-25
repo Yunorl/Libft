@@ -6,7 +6,7 @@
 #    By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/06 17:04:07 by dnahon            #+#    #+#              #
-#    Updated: 2025/04/25 15:39:52 by dnahon           ###   ########.fr        #
+#    Updated: 2025/04/25 17:46:20 by dnahon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,9 +47,10 @@ SRC = ./src/alloc/ft_calloc.c ./src/alloc/ft_free.c \
 	./src/str/copy/ft_strlcpy.c ./src/str/info/ft_strlen.c \
 	./src/str/info/ft_strnlen.c ./src/str/modify/ft_strrev.c \
 	./src/str/modify/ft_strjoin.c ./src/str/modify/ft_substr.c \
-	./src/str/search/ft_strchr.c ./src/str/search/ft_strchrnul.c \
-	./src/str/search/ft_strnstr.c ./src/str/search/ft_strrchr.c \
-	./src/str/search/ft_strstr.c 
+	./src/str/modify/ft_strtrim.c ./src/str/search/ft_strchr.c \
+	./src/str/search/ft_strchrnul.c ./src/str/search/ft_strnstr.c \
+	./src/str/search/ft_strrchr.c ./src/str/search/ft_strstr.c \
+	 
 OBJ = $(SRC:.c=.o)
 
 # Color codes

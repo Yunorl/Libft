@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:05:29 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/25 14:54:23 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/25 17:58:33 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,38 +45,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	j;
 	unsigned int	occur;
 
-	i = 0;
-	j = 0;
-	occur = 0;
 	if (!s1)
 		return (NULL);
-	while (s1)
-	{
-		if (ft_strchr2(set, s1[i]))
-			occur++;
-	}
-	str = malloc(sizeof(char *) * (ft_strlen(s1) - occur) + 1);
+	i = 0;
+	while (s1[i] && ft_strchr2(set, s1[i]))
+		i++;
+	j = ft_strlen(s1);
+	while (j > i && ft_strchr2(set, s1[j - 1]))
+		j--;
+	str = malloc(sizeof(char) * (j - i + 1));
 	if (!str)
 		return (NULL);
-	while (s1)
+	occur = 0;
+	while (i < j)
 	{
-		if (!ft_strchr2(set, s1[i]))
-		{
-			str[i] = s1[j];
-			i++;
-			j++;
-		}
-		else if (ft_strchr2(set, s1[i]))
-		{
-			i++;
-			j++;
-		}
+		str[occur++] = s1[i++];
 	}
-	str[i] = '\0';
+	str[occur] = '\0';
 	return (str);
-}
-
-int	main(void)
-{
-	printf("%s", ft_strtrim("test", "t"));
 }
