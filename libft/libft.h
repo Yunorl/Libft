@@ -6,13 +6,14 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 18:13:54 by dnahon            #+#    #+#             */
-/*   Updated: 2025/03/05 18:13:54 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/25 12:50:21 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <limits.h>
 # include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -81,5 +82,6 @@ int			*ft_intcpy(int *src, int *dst, size_t size);
 void		ft_intsort(int *arr, size_t size);
 int			*ft_arrdup(int *arr, size_t size);
 int			ft_is_palindrome(char *str);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
