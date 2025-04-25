@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:05:29 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/25 17:58:33 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/25 18:14:24 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	j = ft_strlen(s1);
 	while (j > i && ft_strchr2(set, s1[j - 1]))
 		j--;
-	str = malloc(sizeof(char) * (j - i + 1));
+	str = ft_malloc(sizeof(char) * (j - i + 1));
 	if (!str)
 		return (NULL);
 	occur = 0;

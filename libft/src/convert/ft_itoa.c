@@ -1,33 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/06 23:56:31 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/25 18:13:11 by dnahon           ###   ########.fr       */
+/*   Created: 2025/04/25 18:34:51 by dnahon            #+#    #+#             */
+/*   Updated: 2025/04/25 19:29:09 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
-#include <stddef.h>
 
-void	*realloc(void *ptr, size_t size)
+size_t	ft_nblen(int n)
 {
-	void	*new_ptr;
+	int	len;
 
-	if (!ptr)
-		return (ft_malloc(size));
-	if (size == 0)
+	len = (n <= 0);
+	while (n)
 	{
-		ft_free(ptr);
-		return (NULL);
+		n /= 10;
+		len++;
 	}
-	new_ptr = ft_malloc(size);
-	if (!new_ptr)
+	return (len);
+}
+
+char	*ft_itoa(int n)
+{
+	long	nb;
+	int		len;
+	char	*str;
+
+	nb = n;
+	len = ft_nblen(n);
+	str = ft_malloc(sizeof(char) * len + 1);
+	if (!str)
 		return (NULL);
-	ft_memcpy(new_ptr, ptr, size);
-	ft_free(ptr);
-	return (new_ptr);
+	str[len] = '\0';
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb = -nb;
+	}
+	while (len-- > (n < 0))
+	{
+		str[len] = (nb % 10) + '0';
+		nb = nb / 10;
+	}
+	return (str);
 }
