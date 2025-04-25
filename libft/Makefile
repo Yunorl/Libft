@@ -6,7 +6,7 @@
 #    By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/06 17:04:07 by dnahon            #+#    #+#              #
-#    Updated: 2025/03/06 20:14:55 by dnahon           ###   ########.fr        #
+#    Updated: 2025/04/25 15:39:52 by dnahon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,40 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
 SRC_DIR = src
-SRC = $(wildcard $(SRC_DIR)/*.c) \
-	  $(wildcard $(SRC_DIR)/*/*.c) \
-	  $(wildcard $(SRC_DIR)/*/*/*.c)
+SRC = ./src/alloc/ft_calloc.c ./src/alloc/ft_free.c \
+	./src/alloc/ft_malloc.c ./src/alloc/ft_realloc.c \
+	./src/array/ft_intcpy.c ./src/array/ft_intdup.c \
+	./src/array/ft_intsort.c ./src/checks/ft_isalnum.c \
+	./src/checks/ft_isalpha.c ./src/checks/ft_isascii.c \
+	./src/checks/ft_isblank.c ./src/checks/ft_iscntrl.c \
+	./src/checks/ft_isdigit.c ./src/checks/ft_isgraph.c \
+	./src/checks/ft_islower.c ./src/checks/ft_isprint.c \
+	./src/checks/ft_ispunct.c ./src/checks/ft_isspace.c \
+	./src/checks/ft_isupper.c ./src/checks/ft_isxdigit.c \
+	./src/convert/ft_atoi_strict.c ./src/convert/ft_atoi.c \
+	./src/convert/ft_atol_strict.c ./src/convert/ft_atol.c \
+	./src/convert/ft_atoll_strict.c ./src/convert/ft_atoll.c \
+	./src/convert/ft_tolower.c ./src/convert/ft_toupper.c \
+	./src/io/ft_putchar_fd.c ./src/io/ft_putchar.c \
+	./src/io/ft_putend_fd.c ./src/io/ft_putnbr_fd.c \
+	./src/io/ft_putnbr.c ./src/io/ft_putstr_fd.c \
+	./src/io/ft_putstr.c ./src/math/ft_abs.c \
+	./src/math/ft_intlen.c ./src/math/ft_max.c \
+	./src/math/ft_min.c ./src/math/ft_nmax.c \
+	./src/math/ft_nmin.c ./src/mem/ft_bzero.c \
+	./src/mem/ft_memccpy.c ./src/mem/ft_memchr.c \
+	./src/mem/ft_memcmp.c ./src/mem/ft_memcpy.c \
+	./src/mem/ft_memmove.c ./src/mem/ft_memset.c \
+	./src/str/compare/ft_is_palindrome.c ./src/str/compare/ft_strcmp.c \
+	./src/str/compare/ft_strncmp.c ./src/str/concat/ft_strcat.c \
+	./src/str/concat/ft_strlcat.c ./src/str/concat/ft_strncat.c \
+	./src/str/copy/ft_strcpy.c ./src/str/copy/ft_strdup.c \
+	./src/str/copy/ft_strlcpy.c ./src/str/info/ft_strlen.c \
+	./src/str/info/ft_strnlen.c ./src/str/modify/ft_strrev.c \
+	./src/str/modify/ft_strjoin.c ./src/str/modify/ft_substr.c \
+	./src/str/search/ft_strchr.c ./src/str/search/ft_strchrnul.c \
+	./src/str/search/ft_strnstr.c ./src/str/search/ft_strrchr.c \
+	./src/str/search/ft_strstr.c 
 OBJ = $(SRC:.c=.o)
 
 # Color codes
