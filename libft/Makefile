@@ -6,7 +6,7 @@
 #    By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/06 17:04:07 by dnahon            #+#    #+#              #
-#    Updated: 2025/04/28 14:42:13 by dnahon           ###   ########.fr        #
+#    Updated: 2025/04/28 15:34:54 by dnahon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,9 @@ SRC = ./src/alloc/ft_calloc.c ./src/alloc/ft_free.c \
 	./src/convert/ft_itoa.c ./src/str/modify/ft_split.c \
 	./src/str/modify/ft_strmapi.c ./src/str/modify/ft_striteri.c \
 
-SRC_B = ./src/bonus/ft_bonus_lstnew.c
+SRC_B = ./src/bonus/ft_bonus_lstnew.c ./src/bonus/ft_bonus_lstadd_front.c \
+		./src/bonus/ft_bonus_lstsize.c ./src/bonus/ft_bonus_lstlast.c \
+		./src/bonus/ft_bonus_lstadd_back.c
 
 OBJ = $(SRC:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
