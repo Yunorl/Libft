@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 23:53:34 by dnahon            #+#    #+#             */
-/*   Updated: 2025/03/07 23:53:34 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:22:26 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,14 @@ long	ft_atol(const char *str)
 	}
 	return (nb * signe);
 }
+/*
+int	main(void)
+{
+	const char	*str = "  -1234567890123456789";
+	long		result;
+
+	result = ft_atol(str);
+	printf("Result: %ld\n", result); // Expected output: -1234567890123456789
+	return (0);
+}
+ */

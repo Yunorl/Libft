@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:46:07 by dnahon            #+#    #+#             */
-/*   Updated: 2025/03/07 14:20:35 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:25:04 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,17 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
+/*
+int	main(void)
+{
+	char	src[] = "Hello, World!";
+	char	dest[20];
+	int		c;
+	size_t	n;
+
+	c = 'o';
+	n = 5;
+	ft_memccpy(dest, src, c, n);
+	return (0);
+}
+ */

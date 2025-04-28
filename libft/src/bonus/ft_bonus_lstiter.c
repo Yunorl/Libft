@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bonus_lstlast.c                                 :+:      :+:    :+:   */
+/*   ft_bonus_lstiter.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 15:07:26 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 16:31:39 by dnahon           ###   ########.fr       */
+/*   Created: 2025/04/28 17:55:35 by dnahon            #+#    #+#             */
+/*   Updated: 2025/04/28 19:07:54 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
+	if (!f)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
 		lst = lst->next;
-	return (lst);
+	}
 }
-
 /*
 int	main(void)
 {
 	t_list	*lst;
-	t_list	*last;
+	t_list	*new;
 
 	lst = ft_lstnew("Hello");
-	ft_lstadd_back(&lst, ft_lstnew("World"));
-	last = ft_lstlast(lst);
-	printf("%s\n", (char *)last->content);
+	new = ft_lstnew("World");
+	lst->next = new;
+	ft_lstiter(lst, &ft_putstr);
 	return (0);
 }
-*/
+ */

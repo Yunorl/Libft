@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:14:59 by dnahon            #+#    #+#             */
-/*   Updated: 2025/03/07 14:20:35 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:25:14 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,16 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+/*
+int	main(void)
+{
+	char	str[] = "Hello, World!";
+	int		c;
+	size_t	n;
+
+	c = 'o';
+	n = 5;
+	printf("%s\n", (char *)ft_memchr(str, c, n));
+	return (0);
+}
+ */

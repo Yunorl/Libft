@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:05:29 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/25 18:14:24 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:30:24 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,3 +64,26 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[occur] = '\0';
 	return (str);
 }
+/*
+int	main(void)
+{
+	char	*s1;
+	char	*set;
+	char	*result;
+
+	s1 = "   Hello, World!   ";
+	set = " ";
+	result = ft_strtrim(s1, set);
+	if (result)
+	{
+		printf("Original: '%s'\n", s1);
+		printf("Trimmed: '%s'\n", result);
+		free(result);
+	}
+	else
+	{
+		printf("Memory allocation failed.\n");
+	}
+	return (0);
+}
+ */

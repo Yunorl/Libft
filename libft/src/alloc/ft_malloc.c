@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 23:46:44 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/25 18:13:14 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:18:22 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,19 @@ void	*ft_malloc(size_t size)
 	}
 	return (ptr);
 }
+
+/* int	main(void)
+{
+	int	*ptr;
+	int	i;
+
+	ptr = (int *)ft_malloc(5 * sizeof(int));
+	if (!ptr)
+		return (1);
+	for (i = 0; i < 5; i++)
+		ptr[i] = i;
+	for (i = 0; i < 5; i++)
+		printf("%d ", ptr[i]);
+	ft_free(ptr);
+	return (0);
+} */

@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 22:13:51 by dnahon            #+#    #+#             */
-/*   Updated: 2025/03/07 14:20:35 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:24:10 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,13 @@ void	ft_putnbr(int n)
 		ft_putnbr(nb / 10);
 	ft_putchar(nb % 10 + '0');
 }
+/*
+int	main(void)
+{
+	int	num;
+
+	num = -12345;
+	ft_putnbr(num);
+	return (0);
+}
+ */

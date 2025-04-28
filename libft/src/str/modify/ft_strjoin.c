@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 13:21:02 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/25 18:14:16 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:29:50 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,25 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i + j] = '\0';
 	return (str);
 }
+/*
+int	main(void)
+{
+	char	*s1;
+	char	*s2;
+	char	*result;
+
+	s1 = "Hello, ";
+	s2 = "World!";
+	result = ft_strjoin(s1, s2);
+	if (result)
+	{
+		printf("Result: %s\n", result);
+		free(result);
+	}
+	else
+	{
+		printf("Memory allocation failed.\n");
+	}
+	return (0);
+}
+ */

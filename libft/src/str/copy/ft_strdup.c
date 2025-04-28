@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 20:28:51 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 13:43:18 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:28:41 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,18 @@ char	*ft_strdup(const char *src)
 	ptr = ft_strcpy(ptr, src);
 	return (ptr);
 }
+/*
+int	main(void)
+{
+	const char	*src = "Hello, World!";
+	char		*dup;
+
+	dup = ft_strdup(src);
+	if (!dup)
+		return (1);
+	printf("Original: %s\n", src);
+	printf("Duplicate: %s\n", dup);
+	ft_free(dup);
+	return (0);
+}
+ */

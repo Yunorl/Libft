@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 20:03:35 by dnahon            #+#    #+#             */
-/*   Updated: 2025/03/07 14:20:35 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:22:04 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,14 @@ int	ft_atoi(const char *str)
 	}
 	return (nb * signe);
 }
+/*
+int	main(void)
+{
+	const char	*str = "  -12345";
+	int			result;
+
+	result = ft_atoi(str);
+	printf("Result: %d\n", result); // Expected output: -12345
+	return (0);
+}
+ */

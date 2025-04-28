@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:11:26 by dnahon            #+#    #+#             */
-/*   Updated: 2025/03/07 14:20:35 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:31:02 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,24 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	}
 	return (0);
 }
+/*
+int	main(void)
+{
+	const char	*str = "Hello, World!";
+	const char	*to_find = "World";
+	size_t		len;
+	char		*result;
+
+	len = 20;
+	result = ft_strnstr(str, to_find, len);
+	if (result)
+	{
+		printf("Found: %s\n", result);
+	}
+	else
+	{
+		printf("Not found\n");
+	}
+	return (0);
+}
+ */

@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 12:08:05 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 13:28:01 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:29:25 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,3 +94,26 @@ char	**ft_split(char const *s, char c)
 	tab = ft_minisplit(s, c);
 	return (tab);
 }
+/*
+int	main(void)
+{
+	char	**result;
+	int		i;
+
+	result = ft_split("Hello, World! This is a test.", ' ');
+	if (!result)
+	{
+		printf("Memory allocation failed\n");
+		return (1);
+	}
+	i = 0;
+	while (result[i])
+	{
+		printf("%s\n", result[i]);
+		ft_free(result[i]);
+		i++;
+	}
+	ft_free(result);
+	return (0);
+}
+ */

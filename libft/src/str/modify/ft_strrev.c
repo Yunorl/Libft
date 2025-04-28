@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 00:08:31 by dnahon            #+#    #+#             */
-/*   Updated: 2025/03/08 00:08:31 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:30:14 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,14 @@ char	*ft_strrev(char *str)
 	}
 	return (str);
 }
+/*
+int	main(void)
+{
+	char	str[] = "Hello, World!";
+
+	printf("Original: %s\n", str);
+	ft_strrev(str);
+	printf("Reversed: %s\n", str);
+	return (0);
+}
+ */

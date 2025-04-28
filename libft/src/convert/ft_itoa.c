@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:34:51 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/25 19:29:09 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:23:05 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,3 +49,24 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+/*
+int	main(void)
+{
+	int		num;
+	char	*str;
+
+	num = -12345;
+	str = ft_itoa(num);
+	if (str)
+	{
+		printf("Integer: %d\n", num);
+		printf("String: %s\n", str);
+		free(str);
+	}
+	else
+	{
+		printf("Memory allocation failed\n");
+	}
+	return (0);
+}
+ */

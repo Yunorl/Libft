@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 12:24:11 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/25 18:14:31 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:30:35 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
+/*
+int	main(void)
+{
+	char	*str;
+	char	*result;
+
+	str = "Hello, World!";
+	result = ft_substr(str, 7, 5);
+	if (result)
+	{
+		printf("Result: %s\n", result);
+		free(result);
+	}
+	else
+	{
+		printf("Memory allocation failed.\n");
+	}
+	return (0);
+}
+ */

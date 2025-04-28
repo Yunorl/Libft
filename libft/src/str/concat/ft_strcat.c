@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:36:05 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/25 13:47:22 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:28:03 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,15 @@ char	*ft_strcat(char *dest, const char *src)
 	dest[len_dest + i] = '\0';
 	return (dest);
 }
+/*
+int	main(void)
+{
+	char		dest[50] = "Hello, ";
+	const char	*src = "World!";
+
+	printf("Before strcat: %s\n", dest);
+	ft_strcat(dest, src);
+	printf("After strcat: %s\n", dest);
+	return (0);
+}
+ */

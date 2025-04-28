@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bonus_lstlast.c                                 :+:      :+:    :+:   */
+/*   ft_bonus_lstclear.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 15:07:26 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 16:31:39 by dnahon           ###   ########.fr       */
+/*   Created: 2025/04/28 17:34:50 by dnahon            #+#    #+#             */
+/*   Updated: 2025/04/28 17:51:39 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
-}
+	t_list	*temp;
 
+	if (!lst || !del)
+		return ;
+	while (*lst)
+	{
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
+	}
+}
 /*
 int	main(void)
 {
 	t_list	*lst;
-	t_list	*last;
+	t_list	*new;
 
 	lst = ft_lstnew("Hello");
-	ft_lstadd_back(&lst, ft_lstnew("World"));
-	last = ft_lstlast(lst);
-	printf("%s\n", (char *)last->content);
+	new = ft_lstnew("World");
+	lst->next = new;
+	ft_lstclear(&lst, ft_free);
+	if (lst == NULL)
+		printf("List cleared successfully\n");
+	else
+		printf("List not cleared\n");
 	return (0);
 }
 */

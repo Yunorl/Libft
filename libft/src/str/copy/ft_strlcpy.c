@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 21:08:56 by dnahon            #+#    #+#             */
-/*   Updated: 2025/03/07 14:20:35 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:28:49 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (src_len);
 }
+/*
+int	main(void)
+{
+	char		dest[50];
+	const char	*src = "Hello, World!";
+	size_t		size;
+
+	size = 20;
+	ft_strlcpy(dest, src, size);
+	printf("Source: %s\n", src);
+	printf("Destination: %s\n", dest);
+	return (0);
+}
+ */

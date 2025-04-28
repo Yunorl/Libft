@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:37:33 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/25 13:49:57 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:28:11 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,17 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
+/*
+int	main(void)
+{
+	char		dest[50] = "Hello, ";
+	const char	*src = "World!";
+	size_t		size;
+
+	size = 20;
+	printf("Before strlcat: %s\n", dest);
+	ft_strlcat(dest, src, size);
+	printf("After strlcat: %s\n", dest);
+	return (0);
+}
+ */

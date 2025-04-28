@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 00:29:45 by dnahon            #+#    #+#             */
-/*   Updated: 2025/03/08 00:29:45 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/28 16:19:53 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,14 @@ void	ft_intsort(int *arr, size_t size)
 		i++;
 	}
 }
+
+/* int main(void)
+{
+	int arr[5] = {5, 3, 4, 1, 2};
+	size_t i;
+
+	ft_intsort(arr, 5);
+	for (i = 0; i < 5; i++)
+		printf("%d ", arr[i]);
+	return (0);
+} */
