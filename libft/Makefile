@@ -6,7 +6,7 @@
 #    By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/06 17:04:07 by dnahon            #+#    #+#              #
-#    Updated: 2025/04/25 19:18:03 by dnahon           ###   ########.fr        #
+#    Updated: 2025/04/28 14:42:13 by dnahon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
-SRC_DIR = src
+SRC_DIR = ./src
+SRC_DIR_B = ./src/bonus
 SRC = ./src/alloc/ft_calloc.c ./src/alloc/ft_free.c \
 	./src/alloc/ft_malloc.c ./src/alloc/ft_realloc.c \
 	./src/array/ft_intcpy.c ./src/array/ft_intdup.c \
@@ -50,9 +51,13 @@ SRC = ./src/alloc/ft_calloc.c ./src/alloc/ft_free.c \
 	./src/str/modify/ft_strtrim.c ./src/str/search/ft_strchr.c \
 	./src/str/search/ft_strchrnul.c ./src/str/search/ft_strnstr.c \
 	./src/str/search/ft_strrchr.c ./src/str/search/ft_strstr.c \
-	./src/convert/ft_itoa.c
-	 
+	./src/convert/ft_itoa.c ./src/str/modify/ft_split.c \
+	./src/str/modify/ft_strmapi.c ./src/str/modify/ft_striteri.c \
+
+SRC_B = ./src/bonus/ft_bonus_lstnew.c
+
 OBJ = $(SRC:.c=.o)
+OBJ_B = $(SRC_B:.c=.o)
 
 # Color codes
 GREEN = \033[0;32m
@@ -65,9 +70,9 @@ NC = \033[0m # No Color
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(OBJ_B)
 	@echo "$(YELLOW)Building $(NC)$(NAME)"
-	@$(AR) $(NAME) $(OBJ)
+	@$(AR) $(NAME) $(OBJ) $(OBJ_B)
 
 $(SRC_DIR)/%.o: $(SRC_DIR)/%.c libft.h
 	@echo "$(CYAN)Compiling $(NC)$<"
@@ -75,10 +80,18 @@ $(SRC_DIR)/%.o: $(SRC_DIR)/%.c libft.h
 
 clean:
 	@echo "$(CYAN)Cleaning object files"
-	@$(RM) $(OBJ)
+	@$(RM) $(OBJ) $(OBJ_B)
 
 fclean: clean
 	@echo "$(CYAN)Cleaning $(NC)$(NAME)"
 	@$(RM) $(NAME)
+
+bonus: $(OBJ) $(OBJ_B)
+	@ar rcs $(NAME) $(OBJ) $(OBJ_B)
+	@echo "$(YELLOW)Building $(NC)$(NAME) with bonus"
+
+$(SRC_DIR_B)/%.o: $(SRC_DIR_B)/%.c libft.h
+	@echo "$(CYAN)Compiling bonus $(NC)$<"
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 re: fclean all
