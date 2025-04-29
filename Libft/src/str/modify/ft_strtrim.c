@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:05:29 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 16:30:24 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/29 18:04:21 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,6 @@ char	*ft_strchr2(const char *str, int c)
 	if (uc == '\0')
 		return ((char *)str);
 	return (0);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
