@@ -6,7 +6,7 @@
 #    By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/06 17:04:07 by dnahon            #+#    #+#              #
-#    Updated: 2025/04/28 18:16:56 by dnahon           ###   ########.fr        #
+#    Updated: 2025/04/29 12:27:45 by dnahon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,12 +74,20 @@ NC = \033[0m # No Color
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(OBJ_B)
+$(NAME): $(OBJ)
 	@echo "$(YELLOW)Building $(NC)$(NAME)"
-	@$(AR) $(NAME) $(OBJ) $(OBJ_B)
+	@$(AR) $(NAME) $(OBJ)
 
 $(SRC_DIR)/%.o: $(SRC_DIR)/%.c libft.h
 	@echo "$(CYAN)Compiling $(NC)$<"
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+bonus: $(OBJ_B)
+	@$(AR) $(NAME) $(OBJ_B)
+	@echo "$(YELLOW)Building $(NC)$(NAME) with bonus"
+
+$(SRC_DIR_B)/%.o: $(SRC_DIR_B)/%.c libft.h
+	@echo "$(CYAN)Compiling bonus $(NC)$<"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
@@ -90,12 +98,6 @@ fclean: clean
 	@echo "$(CYAN)Cleaning $(NC)$(NAME)"
 	@$(RM) $(NAME)
 
-bonus: $(OBJ) $(OBJ_B)
-	@ar rcs $(NAME) $(OBJ) $(OBJ_B)
-	@echo "$(YELLOW)Building $(NC)$(NAME) with bonus"
-
-$(SRC_DIR_B)/%.o: $(SRC_DIR_B)/%.c libft.h
-	@echo "$(CYAN)Compiling bonus $(NC)$<"
-	@$(CC) $(CFLAGS) -c $< -o $@
-
 re: fclean all
+
+.PHONY: all clean fclean re bonus
