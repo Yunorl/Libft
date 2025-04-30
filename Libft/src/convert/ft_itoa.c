@@ -6,13 +6,13 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:34:51 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 16:23:05 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/30 18:12:43 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-size_t	ft_nblen(int n)
+static size_t	ft_nblen(int n)
 {
 	int	len;
 

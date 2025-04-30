@@ -6,13 +6,13 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:05:29 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/29 18:04:21 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/30 18:18:04 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../libft.h"
 
-char	*ft_strchr2(const char *str, int c)
+static char	*ft_strchr2(const char *str, int c)
 {
 	unsigned char	uc;
 

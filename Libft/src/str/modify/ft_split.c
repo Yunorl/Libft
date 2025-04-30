@@ -6,13 +6,13 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 12:08:05 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 16:29:25 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/30 18:17:45 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -31,7 +31,7 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-char	*malloc_word(char const *s, char c)
+static char	*malloc_word(char const *s, char c)
 {
 	int		i;
 	char	*word;
@@ -46,7 +46,7 @@ char	*malloc_word(char const *s, char c)
 	return (word);
 }
 
-void	*free_all(char **tab, int j)
+static void	*free_all(char **tab, int j)
 {
 	while (j >= 0)
 	{
@@ -57,7 +57,7 @@ void	*free_all(char **tab, int j)
 	return (NULL);
 }
 
-char	**ft_minisplit(char const *s, char c)
+static char	**ft_minisplit(char const *s, char c)
 {
 	char	**tab;
 	int		i;

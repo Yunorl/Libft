@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:46:07 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 16:25:04 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/04/30 18:15:47 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	str1 = (unsigned char *)dest;
 	str2 = (unsigned char *)src;
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	while (i < n)
 	{
 		str1[i] = str2[i];

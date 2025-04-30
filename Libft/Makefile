@@ -6,7 +6,7 @@
 #    By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/06 17:04:07 by dnahon            #+#    #+#              #
-#    Updated: 2025/04/29 15:37:45 by dnahon           ###   ########.fr        #
+#    Updated: 2025/04/30 18:18:46 by dnahon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
 SRC_DIR = ./src
-SRC_DIR_B = ./src/bonus
 SRC = ./src/alloc/ft_calloc.c ./src/alloc/ft_free.c \
 	./src/alloc/ft_malloc.c ./src/alloc/ft_realloc.c \
 	./src/array/ft_intcpy.c ./src/array/ft_intdup.c \
@@ -53,12 +52,11 @@ SRC = ./src/alloc/ft_calloc.c ./src/alloc/ft_free.c \
 	./src/str/search/ft_strrchr.c ./src/str/search/ft_strstr.c \
 	./src/convert/ft_itoa.c ./src/str/modify/ft_split.c \
 	./src/str/modify/ft_strmapi.c ./src/str/modify/ft_striteri.c \
-
-SRC_B = ./src/bonus/ft_bonus_lstnew.c ./src/bonus/ft_bonus_lstadd_front.c \
-		./src/bonus/ft_bonus_lstsize.c ./src/bonus/ft_bonus_lstlast.c \
-		./src/bonus/ft_bonus_lstadd_back.c ./src/bonus/ft_bonus_lstdelone.c \
-		./src/bonus/ft_bonus_lstclear.c ./src/bonus/ft_bonus_lstiter.c \
-		./src/bonus/ft_bonus_lstmap.c
+	./src/linked_list/ft_lstnew.c ./src/linked_list/ft_lstadd_front.c \
+	./src/linked_list/ft_lstsize.c ./src/linked_list/ft_lstlast.c \
+	./src/linked_list/ft_lstadd_back.c ./src/linked_list/ft_lstdelone.c \
+	./src/linked_list/ft_lstclear.c ./src/linked_list/ft_lstiter.c \
+	./src/linked_list/ft_lstmap.c
 
 OBJ = $(SRC:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
@@ -82,14 +80,6 @@ $(SRC_DIR)/%.o: $(SRC_DIR)/%.c libft.h
 	@echo "$(CYAN)Compiling $(NC)$<"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: $(OBJ_B)
-	@$(AR) $(NAME) $(OBJ_B)
-	@echo "$(YELLOW)Building $(NC)$(NAME) with bonus"
-
-$(SRC_DIR_B)/%.o: $(SRC_DIR_B)/%.c libft.h
-	@echo "$(CYAN)Compiling bonus $(NC)$<"
-	@$(CC) $(CFLAGS) -c $< -o $@
-
 clean:
 	@echo "$(CYAN)Cleaning object files"
 	@$(RM) $(OBJ) $(OBJ_B)
@@ -100,4 +90,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
