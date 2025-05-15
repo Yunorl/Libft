@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_printnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 18:34:51 by dnahon            #+#    #+#             */
-/*   Updated: 2025/05/15 13:45:00 by dnahon           ###   ########.fr       */
+/*   Created: 2025/01/22 13:55:32 by dnahon            #+#    #+#             */
+/*   Updated: 2025/05/15 13:46:52 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "../../includes/ft_printf.h"
 
 static size_t	ft_nblen(int n)
 {
@@ -25,7 +25,7 @@ static size_t	ft_nblen(int n)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+static char	*ft_itoa(int n)
 {
 	long	nb;
 	int		len;
@@ -33,7 +33,7 @@ char	*ft_itoa(int n)
 
 	nb = n;
 	len = ft_nblen(n);
-	str = ft_malloc(sizeof(char) * len + 1);
+	str = malloc(sizeof(char) * len + 1);
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
@@ -49,24 +49,15 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/*
-int	main(void)
-{
-	int		num;
-	char	*str;
 
-	num = -12345;
-	str = ft_itoa(num);
-	if (str)
-	{
-		printf("Integer: %d\n", num);
-		printf("String: %s\n", str);
-		free(str);
-	}
-	else
-	{
-		printf("Memory allocation failed\n");
-	}
-	return (0);
+int	ft_printnbr(int n)
+{
+	int		len;
+	char	*num;
+
+	len = 0;
+	num = ft_itoa(n);
+	len = ft_printstr(num);
+	free(num);
+	return (len);
 }
- */

@@ -6,9 +6,11 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 21:36:08 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 16:31:10 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/05/15 13:50:36 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../../../includes/libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
@@ -16,9 +18,7 @@ char	*ft_strrchr(const char *str, int c)
 	unsigned char	uc;
 
 	uc = (unsigned char)c;
-	i = 0;
-	while (str[i])
-		i++;
+	i = ft_strlen(str);
 	while (i >= 0)
 	{
 		if (str[i] == uc)

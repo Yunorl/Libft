@@ -6,7 +6,7 @@
 #    By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/06 17:04:07 by dnahon            #+#    #+#              #
-#    Updated: 2025/04/30 18:18:46 by dnahon           ###   ########.fr        #
+#    Updated: 2025/05/15 13:24:52 by dnahon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,10 +56,14 @@ SRC = ./src/alloc/ft_calloc.c ./src/alloc/ft_free.c \
 	./src/linked_list/ft_lstsize.c ./src/linked_list/ft_lstlast.c \
 	./src/linked_list/ft_lstadd_back.c ./src/linked_list/ft_lstdelone.c \
 	./src/linked_list/ft_lstclear.c ./src/linked_list/ft_lstiter.c \
-	./src/linked_list/ft_lstmap.c
+	./src/linked_list/ft_lstmap.c ./src/printf/ft_printf_utils.c \
+	./src/printf/ft_printf.c ./src/printf/ft_printnbr.c \
+	./src/printf/ft_printnbrui.c ./src/printf/ft_printptr.c \
+	./src/printf/ft_putnbr_base.c
+
+INCLUDES = ./includes/libft.h ./includes/ft_printf.h
 
 OBJ = $(SRC:.c=.o)
-OBJ_B = $(SRC_B:.c=.o)
 
 # Color codes
 GREEN = \033[0;32m
@@ -76,14 +80,13 @@ $(NAME): $(OBJ)
 	@echo "$(YELLOW)Building $(NC)$(NAME)"
 	@$(AR) $(NAME) $(OBJ)
 
-$(SRC_DIR)/%.o: $(SRC_DIR)/%.c libft.h
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.c $(INCLUDES)
 	@echo "$(CYAN)Compiling $(NC)$<"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@echo "$(CYAN)Cleaning object files"
-	@$(RM) $(OBJ) $(OBJ_B)
-
+	@$(RM) $(OBJ)
 fclean: clean
 	@echo "$(CYAN)Cleaning $(NC)$(NAME)"
 	@$(RM) $(NAME)

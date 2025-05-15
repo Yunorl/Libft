@@ -6,11 +6,11 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 12:08:05 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/30 18:17:45 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/05/15 13:47:50 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../libft.h"
+#include "../../../includes/libft.h"
 
 static int	count_words(char const *s, char c)
 {

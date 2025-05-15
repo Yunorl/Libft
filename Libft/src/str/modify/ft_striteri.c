@@ -6,11 +6,11 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 13:48:21 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 16:29:35 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/05/15 13:47:53 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../libft.h"
+#include "../../../includes/libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

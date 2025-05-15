@@ -6,11 +6,11 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:37:33 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 16:28:21 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/05/15 13:47:36 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../libft.h"
+#include "../../../includes/libft.h"
 
 char	*ft_strncat(char *dest, const char *src, size_t nb)
 {

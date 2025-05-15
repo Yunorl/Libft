@@ -6,11 +6,11 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 13:30:08 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 18:18:07 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/05/15 13:47:59 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../libft.h"
+#include "../../../includes/libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

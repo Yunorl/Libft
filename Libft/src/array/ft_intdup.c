@@ -6,11 +6,11 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 00:30:18 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 16:19:40 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/05/15 13:26:29 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "../../includes/libft.h"
 #include <stddef.h>
 
 int	*ft_arrdup(int *arr, size_t size)

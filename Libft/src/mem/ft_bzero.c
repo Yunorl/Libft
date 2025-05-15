@@ -6,11 +6,11 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:56:14 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/28 16:24:57 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/05/15 13:46:11 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "../../includes/libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

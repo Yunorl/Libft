@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 18:13:54 by dnahon            #+#    #+#             */
-/*   Updated: 2025/04/30 18:07:01 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/05/15 13:51:17 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
-char				*ft_strchr(char *str, int c);
-char				*ft_strrchr(char *str, int c);
+char				*ft_strchr(const char *str, int c);
+char				*ft_strrchr(const char *str, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 void				ft_putstr(char *str);
 char				*ft_strstr(const char *str, const char *to_find);
