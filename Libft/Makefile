@@ -6,7 +6,7 @@
 #    By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/06 17:04:07 by dnahon            #+#    #+#              #
-#    Updated: 2025/05/15 13:24:52 by dnahon           ###   ########.fr        #
+#    Updated: 2025/05/15 14:16:15 by dnahon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,51 +15,51 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
-SRC_DIR = ./src
-SRC = ./src/alloc/ft_calloc.c ./src/alloc/ft_free.c \
-	./src/alloc/ft_malloc.c ./src/alloc/ft_realloc.c \
-	./src/array/ft_intcpy.c ./src/array/ft_intdup.c \
-	./src/array/ft_intsort.c ./src/checks/ft_isalnum.c \
-	./src/checks/ft_isalpha.c ./src/checks/ft_isascii.c \
-	./src/checks/ft_isblank.c ./src/checks/ft_iscntrl.c \
-	./src/checks/ft_isdigit.c ./src/checks/ft_isgraph.c \
-	./src/checks/ft_islower.c ./src/checks/ft_isprint.c \
-	./src/checks/ft_ispunct.c ./src/checks/ft_isspace.c \
-	./src/checks/ft_isupper.c ./src/checks/ft_isxdigit.c \
-	./src/convert/ft_atoi_strict.c ./src/convert/ft_atoi.c \
-	./src/convert/ft_atol_strict.c ./src/convert/ft_atol.c \
-	./src/convert/ft_atoll_strict.c ./src/convert/ft_atoll.c \
-	./src/convert/ft_tolower.c ./src/convert/ft_toupper.c \
-	./src/io/ft_putchar_fd.c ./src/io/ft_putchar.c \
-	./src/io/ft_putend_fd.c ./src/io/ft_putnbr_fd.c \
-	./src/io/ft_putnbr.c ./src/io/ft_putstr_fd.c \
-	./src/io/ft_putstr.c ./src/math/ft_abs.c \
-	./src/math/ft_intlen.c ./src/math/ft_max.c \
-	./src/math/ft_min.c ./src/math/ft_nmax.c \
-	./src/math/ft_nmin.c ./src/mem/ft_bzero.c \
-	./src/mem/ft_memccpy.c ./src/mem/ft_memchr.c \
-	./src/mem/ft_memcmp.c ./src/mem/ft_memcpy.c \
-	./src/mem/ft_memmove.c ./src/mem/ft_memset.c \
-	./src/str/compare/ft_is_palindrome.c ./src/str/compare/ft_strcmp.c \
-	./src/str/compare/ft_strncmp.c ./src/str/concat/ft_strcat.c \
-	./src/str/concat/ft_strlcat.c ./src/str/concat/ft_strncat.c \
-	./src/str/copy/ft_strcpy.c ./src/str/copy/ft_strdup.c \
-	./src/str/copy/ft_strlcpy.c ./src/str/info/ft_strlen.c \
-	./src/str/info/ft_strnlen.c ./src/str/modify/ft_strrev.c \
-	./src/str/modify/ft_strjoin.c ./src/str/modify/ft_substr.c \
-	./src/str/modify/ft_strtrim.c ./src/str/search/ft_strchr.c \
-	./src/str/search/ft_strchrnul.c ./src/str/search/ft_strnstr.c \
-	./src/str/search/ft_strrchr.c ./src/str/search/ft_strstr.c \
-	./src/convert/ft_itoa.c ./src/str/modify/ft_split.c \
-	./src/str/modify/ft_strmapi.c ./src/str/modify/ft_striteri.c \
-	./src/linked_list/ft_lstnew.c ./src/linked_list/ft_lstadd_front.c \
-	./src/linked_list/ft_lstsize.c ./src/linked_list/ft_lstlast.c \
-	./src/linked_list/ft_lstadd_back.c ./src/linked_list/ft_lstdelone.c \
-	./src/linked_list/ft_lstclear.c ./src/linked_list/ft_lstiter.c \
-	./src/linked_list/ft_lstmap.c ./src/printf/ft_printf_utils.c \
-	./src/printf/ft_printf.c ./src/printf/ft_printnbr.c \
-	./src/printf/ft_printnbrui.c ./src/printf/ft_printptr.c \
-	./src/printf/ft_putnbr_base.c
+SRC_DIR = ./src/libft
+SRC = ./src/libft/alloc/ft_calloc.c ./src/libft/alloc/ft_free.c \
+	./src/libft/alloc/ft_malloc.c ./src/libft/alloc/ft_realloc.c \
+	./src/libft/array/ft_intcpy.c ./src/libft/array/ft_intdup.c \
+	./src/libft/array/ft_intsort.c ./src/libft/checks/ft_isalnum.c \
+	./src/libft/checks/ft_isalpha.c ./src/libft/checks/ft_isascii.c \
+	./src/libft/checks/ft_isblank.c ./src/libft/checks/ft_iscntrl.c \
+	./src/libft/checks/ft_isdigit.c ./src/libft/checks/ft_isgraph.c \
+	./src/libft/checks/ft_islower.c ./src/libft/checks/ft_isprint.c \
+	./src/libft/checks/ft_ispunct.c ./src/libft/checks/ft_isspace.c \
+	./src/libft/checks/ft_isupper.c ./src/libft/checks/ft_isxdigit.c \
+	./src/libft/convert/ft_atoi_strict.c ./src/libft/convert/ft_atoi.c \
+	./src/libft/convert/ft_atol_strict.c ./src/libft/convert/ft_atol.c \
+	./src/libft/convert/ft_atoll_strict.c ./src/libft/convert/ft_atoll.c \
+	./src/libft/convert/ft_tolower.c ./src/libft/convert/ft_toupper.c \
+	./src/libft/io/ft_putchar_fd.c ./src/libft/io/ft_putchar.c \
+	./src/libft/io/ft_putend_fd.c ./src/libft/io/ft_putnbr_fd.c \
+	./src/libft/io/ft_putnbr.c ./src/libft/io/ft_putstr_fd.c \
+	./src/libft/io/ft_putstr.c ./src/libft/math/ft_abs.c \
+	./src/libft/math/ft_intlen.c ./src/libft/math/ft_max.c \
+	./src/libft/math/ft_min.c ./src/libft/math/ft_nmax.c \
+	./src/libft/math/ft_nmin.c ./src/libft/mem/ft_bzero.c \
+	./src/libft/mem/ft_memccpy.c ./src/libft/mem/ft_memchr.c \
+	./src/libft/mem/ft_memcmp.c ./src/libft/mem/ft_memcpy.c \
+	./src/libft/mem/ft_memmove.c ./src/libft/mem/ft_memset.c \
+	./src/libft/str/compare/ft_is_palindrome.c ./src/libft/str/compare/ft_strcmp.c \
+	./src/libft/str/compare/ft_strncmp.c ./src/libft/str/concat/ft_strcat.c \
+	./src/libft/str/concat/ft_strlcat.c ./src/libft/str/concat/ft_strncat.c \
+	./src/libft/str/copy/ft_strcpy.c ./src/libft/str/copy/ft_strdup.c \
+	./src/libft/str/copy/ft_strlcpy.c ./src/libft/str/info/ft_strlen.c \
+	./src/libft/str/info/ft_strnlen.c ./src/libft/str/modify/ft_strrev.c \
+	./src/libft/str/modify/ft_strjoin.c ./src/libft/str/modify/ft_substr.c \
+	./src/libft/str/modify/ft_strtrim.c ./src/libft/str/search/ft_strchr.c \
+	./src/libft/str/search/ft_strchrnul.c ./src/libft/str/search/ft_strnstr.c \
+	./src/libft/str/search/ft_strrchr.c ./src/libft/str/search/ft_strstr.c \
+	./src/libft/convert/ft_itoa.c ./src/libft/str/modify/ft_split.c \
+	./src/libft/str/modify/ft_strmapi.c ./src/libft/str/modify/ft_striteri.c \
+	./src/libft/linked_list/ft_lstnew.c ./src/libft/linked_list/ft_lstadd_front.c \
+	./src/libft/linked_list/ft_lstsize.c ./src/libft/linked_list/ft_lstlast.c \
+	./src/libft/linked_list/ft_lstadd_back.c ./src/libft/linked_list/ft_lstdelone.c \
+	./src/libft/linked_list/ft_lstclear.c ./src/libft/linked_list/ft_lstiter.c \
+	./src/libft/linked_list/ft_lstmap.c ./src/libft/printf/ft_printf_utils.c \
+	./src/libft/printf/ft_printf.c ./src/libft/printf/ft_printnbr.c \
+	./src/libft/printf/ft_printnbrui.c ./src/libft/printf/ft_printptr.c \
+	./src/libft/printf/ft_putnbr_base.c
 
 INCLUDES = ./includes/libft.h ./includes/ft_printf.h
 
